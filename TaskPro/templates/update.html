@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1 draggable="true">Edit Task</h1>
+  <br>
+    <form action="{% url 'edit-task' task_id=task.id %}" method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+            <br>
+    <button type="submit" class="btn btn-primary">Save Edit</button>
+    </form>
+
+{% endblock content %}

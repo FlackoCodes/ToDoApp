@@ -1,5 +1,11 @@
-<body>
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
     <h1>Task Detail</h1>
-    <p>Title: {{ task_detail.title }}</p>
-    <p>Description: {{ task_detail.description }}</p>
-</body>
+    <p>Title: {{ task_details.title }}</p>
+    <p>Description: {{ task_details.description }}</p> <br>
+</div>
+
+{% endblock content %}

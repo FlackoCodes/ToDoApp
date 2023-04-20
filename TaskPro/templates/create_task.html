@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="header">
+    <a href="{% url 'task-list'  %}">&#8592</a>
+
+</div>
+
+<div class="card-body">
+
+     <form action="{% url 'create-task' %}" method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+            <br>
+    <button type="submit" class="button">Add Task</button>
+    </form>
+
+
+</div>
+
+ {% endblock content %}

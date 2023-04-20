@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="header">
+  <h2>Login</h2>
+</div>
+
+<div class="card-body">
+  <form action="" method="POST" >
+  {% csrf_token %}
+
+    <br>
+  <input type="text"  name = "username" placeholder="Enter Username" >
+
+    <br>
+
+  <input type="password" name = "password" placeholder="Enter Password">
+
+
+
+  <input class="button btn-signin" type="submit" name = "submit" value="Login">
+
+</form>
+
+  <p>Not Registered Yet? <a href="{% url 'sign-up' %}">Sign Up</a></p>
+
+
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static  %}
+
+    <meta charset="UTF-8">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'  %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+    <div class="container">
+
+        {% block content %}
+
+    </div>
+
+  {% endblock content  %}
+</body>
+</html>
