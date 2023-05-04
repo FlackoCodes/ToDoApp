@@ -26,7 +26,9 @@ a,p{
     color: #fff;
     padding: 10px;
     border-radius : 5px 5px 0 0;
-    background : linear-gradient(90deg, #EEA309 0%, #EB796F 43%, #EB796F 100%);
+    background: linear-gradient(90deg, #0A4D68 0%, #EB796F 43%, #EB796F 100%);
+
+
 }
 
 .header a{

@@ -97,5 +97,6 @@ def search(request):
         Q(title__icontains=search_parameter)
 
     )
-    context = {'tasks': tasks, 'search_parameter': search_parameter}
+    incomplete_task_count = Task.objects.filter(complete=False).count()
+    context = {'tasks': tasks, 'search_parameter': search_parameter, 'incomplete_task_count' : incomplete_task_count}
     return render(request, 'TaskPro/task_list.html', context=context)

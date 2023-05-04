@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from . import views
 from .views import TaskList, EditTask
@@ -13,4 +15,4 @@ urlpatterns = [
     path('edit-task/<int:task_id>', EditTask.as_view(), name='edit-task'),
     path('create-account/', views.create_account, name='sign-up'),
     path('search/', views.search, name='search'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
